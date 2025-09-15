@@ -1,0 +1,132 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ffffff, #87CEEB); /* Degradado claro: blanco y azul cielo */
+    color: #000;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: #000;
+}
+
+h2 {
+    text-align: center;
+    color: #003366;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #003366;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #002244;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+}
+
+.success {
+    color: green;
+    font-size: 14px;
+}
+
+.login-box h1 {
+    font-size: 28px;
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.login-box p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    color: #003366;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #f9f9f9;
+    color: #000;
+}
+
+.form-group input::placeholder {
+    color: #aaa;
+}
+
+.btn {
+    background-color: #003366;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #002244;
+}
+
+a {
+    color: #003366;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.login-image {
+    width: 100px; /* Ajusta el ancho de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin: 0 auto 20px; /* Centra la imagen y agrega un margen inferior */
+    display: block; /* Asegura que la imagen sea un bloque */
+    border-radius: 50%; /* Opcional: hace la imagen circular */
+}

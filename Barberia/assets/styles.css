@@ -1,0 +1,95 @@
+Para agregar algo de CSS a tu archivo index.php y mejorar su apariencia, puedes incluir un archivo CSS externo o agregar estilos en línea. Aquí te muestro cómo hacerlo utilizando un archivo CSS externo:
+
+### Paso 1: Crear un archivo CSS
+Crea un archivo llamado `styles.css` en una carpeta llamada `css` dentro de tu proyecto. Por ejemplo: `c:\Users\jeral\OneDrive\Escritorio\Proyecto Barberia - Aplicacion web SaaS\css\styles.css`.
+
+En el archivo `styles.css`, agrega algunos estilos básicos:
+
+```css
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+main {
+    padding: 2rem;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+```
+
+### Paso 2: Enlazar el archivo CSS en index.php
+Modifica tu archivo index.php para incluir el archivo CSS. Agrega la etiqueta `<link>` dentro de la sección `<head>`.
+
+```php
+<?php
+// Autoload de Composer (si usas librerías externas)
+require_once __DIR__ . '/vendor/autoload.php';
+
+// Configuración inicial
+require_once __DIR__ . '/config/config.php';
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Barbería</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a la Barbería</h1>
+    </header>
+    <main>
+        <?php
+        // Enrutador básico
+        $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+
+        switch ($uri) {
+            case '/':
+                require_once __DIR__ . '/views/landing.php';
+                break;
+            case '/login':
+                require_once __DIR__ . '/views/login.php';
+                break;
+            case '/dashboard':
+                require_once __DIR__ . '/views/dashboard.php';
+                break;
+            default:
+                http_response_code(404);
+                echo "Página no encontrada.";
+                break;
+        }
+        ?>
+    </main>
+    <footer>
+        <p>&copy; 2025 Barbería SaaS</p>
+    </footer>
+</body>
+</html>
+```
+
+### Resultado
+Cuando abras tu aplicación en el navegador, deberías ver un diseño básico con estilos aplicados. Puedes personalizar el archivo `styles.css` para adaptarlo a tus necesidades.
+
+Similar code found with 1 license type
